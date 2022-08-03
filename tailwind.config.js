@@ -10,8 +10,8 @@ module.exports = {
         '15': '3.75rem',
         'formOverlapMargin': '8rem'
       },
-      minHeight: {
-        'abovethefold': '700px'
+      colors: {
+        'rockset-gray': "#556782"
       }
     },
   },
