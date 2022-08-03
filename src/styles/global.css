@@ -8,7 +8,45 @@
   }
 }
 
+@layer components {
+  .outerSiteHeader {
+    @apply px-4 md:px-8 xl:px-15;
+    @apply h-16;
+    max-width: 1440px;
+    margin: auto;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 5000;
+  }
+
+  .innerHeader {
+    background: #FFFFFF;
+    box-shadow: 0px 14px 24px rgba(102, 0, 153, 0.12);
+    border-radius: 10px;
+  }
+
+  .gradientBackground {
+    background-image: url("../images/homepageGradient.svg");
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+  }
+
+  .blueVerticalGradient {
+    background: linear-gradient(180deg, #EAD3FA -63.15%, #D7EEFF 17.1%, #FFFFFF 96.61%);
+  }
+  .skewFormSection {
+    transform: skewY(-8deg);
+    @apply mt-formOverlapMargin;
+  }
+}
+
 body {
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
