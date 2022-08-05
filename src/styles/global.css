@@ -1,9 +1,9 @@
 @tailwind base;
 
 :root {
-  --skew-angle: 8;
-  --skew-angle-tangent: 0.1405408347;
-  --skew-offset-margin: calc(var(--skew-angle-tangent) * calc(100vw/2));
+  --skew-angle: 6.5;
+  --skew-angle-tangent: 0.1139356083;
+  --skew-offset: calc(var(--skew-angle-tangent) * calc(100vw/2) * -1);
   --form-height-above-center-diagonal: 6.5rem;
   --above-the-fold-height: 43.75rem;
   --nav-height: 4.375rem;
@@ -14,6 +14,7 @@
 body {
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -25,7 +26,7 @@ body {
 
 @layer utilities {
   .wrap {
-    @apply max-w-[90rem] px-[3.75rem] mx-auto;
+    @apply max-w-[90rem] px-[1rem] md:px-[1.875rem] xl:px-[3.75rem] mx-auto;
   }
 }
 
@@ -34,16 +35,16 @@ body {
     @apply h-[var(--nav-height)];
     margin: auto;
     position: fixed;
-    left: 0px;
-    top: 0px;
-    right: 0px;
+    left: 0rem;
+    top: 0rem;
+    right: 0rem;
     z-index: 5000;
   }
 
   .innerHeader {
     background: #FFFFFF;
-    box-shadow: 0px 14px 24px rgba(102, 0, 153, 0.12);
-    border-radius: 10px;
+    box-shadow: 0 0.875rem 1.5rem rgba(102, 0, 153, 0.12);
+    border-radius: 0.625rem;
   }
 
   .gradientBackground {
@@ -56,17 +57,30 @@ body {
   .blueVerticalGradient {
     background: linear-gradient(180deg, #EAD3FA -63.15%, #D7EEFF 17.1%, #FFFFFF 96.61%);
   }
+
+  .testimonialSectionGradient {
+    background: linear-gradient(224.84deg, #E13DFC 1.06%, #A04DF3 9.02%, #783AFA 51.27%, #4B26E1 74.98%, #2200AA 100%);
+  }
+
+  .knowMoreBox {
+    background: linear-gradient(236.58deg, #FF9264 -4.19%, #FF487F 2.7%, #E13DFC 13.86%, #A04DF3 22.94%, #783AFA 31.2%, #4B26E1 38.48%, #2200AA 56.54%, #050046 74.02%);
+    box-shadow: 0 .625rem 1.25rem rgba(236, 66, 162, 0.5);
+    border-radius: 0.625rem;
+  }
+
   .skewFormSection {
-    transform: skewY(calc(var(--skew-angle) * -1deg));
+    transform: skewY(calc(var(--skew-angle) * -1deg)) translateY(var(--skew-offset));
   }
-  .offsetFormSection {
-    margin-top: calc(-2 * var(--skew-offset-margin))
+
+  .translateFormUp {
+    transform: translateY(calc(var(--skew-offset) - 1rem))
   }
+
   .unskewFormSectionContent {
     transform: skewY(calc(var(--skew-angle) * 1deg));
   }
 
-  .btn-primary {
-    @apply px-6 py-3 leading-7 rounded-[10px] bg-[#F2346D] text-white font-semibold text-[1.25rem] w-fit;
+  .btn {
+    @apply px-6 py-3 leading-7 rounded-[.625rem] cursor-pointer text-white font-semibold text-[1.25rem] w-fit;
   }
 }

@@ -11,9 +11,22 @@ module.exports = {
         'formOverlapMargin': '8rem'
       },
       colors: {
-        'rockset-gray': "#556782"
+        'rockset-gray': "#556782",
+        'coral': "#F2346D"
       }
     },
+    screens: {
+      'sm': '640px',
+
+      'md': '768px',
+
+      'lg': '1024px',
+
+      'xl': '1312px',
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
   },
   plugins: [
     require('@tailwindcss/forms')

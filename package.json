@@ -16,7 +16,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-sans": "^4.5.11",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.19.2",
     "gatsby-plugin-styled-components": "^5.19.0",
