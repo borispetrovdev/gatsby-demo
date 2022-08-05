@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-tutorial",
+  "name": "gatsby-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-tutorial",
+  "description": "gatsby-demo",
   "author": "Boris Petrov",
   "keywords": [
     "gatsby"
