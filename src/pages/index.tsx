@@ -14,16 +14,18 @@ const IndexPage = () => {
   return (
     <main className="text-rockset-gray">
       <title>Home Page</title>
-      <section className="gradientBackground w-full h-[var(--above-the-fold-height)] pt-[var(--nav-offset-total)] flex items-center relative">
+      <section className={`gradientBackground w-full lg:h-[var(--above-the-fold-height)] pt-[var(--nav-offset-total)] 
+                           flex items-center relative`}>
         <div className="wrap grid grid-cols-1 lg:grid-cols-2 auto-rows-fr">
-          <article className="flex-1 flex flex-col justify-center space-around pl-[0.375rem] pr-[1.56rem] gap-[1.25rem]">
-            <h1 className="text-[3.25rem] text-black font-semibold leading-[4rem]">MongoDB & Rockset:<br/> Best of Both Worlds</h1>
-            <span className="text-[1.375rem]">
+          <article className={`flex-1 flex flex-col justify-center space-around pl-[0.375rem] lg:pl-0
+                               text-center lg:text-left lg:pr-[1.56rem] gap-[1.1875rem] lg:gap-[1.25rem] items-center lg:items-start`}>
+            <h1 className="text-[2rem] lg:text-[3.25rem] text-black font-semibold lg:leading-[125%]">MongoDB & Rockset:<br/> Best of Both Worlds</h1>
+            <span className="text-[1.125rem] lg:text-[1.375rem]">
               If you're using, or thinking about using, MongoDB then you'll know it doesn't run SQL joins. And using $lookup or a denormalized dataset isn't as optimal as an SQL database to handle joins. But there's good news if you're looking for a real-time analytics solution. 
             </span>
             <a className="btn bg-coral">Free trial</a>
           </article>
-          <div className="flex items-start flex-1 pt-[2.5rem] pl-[2.18rem]">
+          <div className="flex items-start flex-1 pt-[2.5rem] lg:pl-[2.18rem]">
             <img src={MongoDiagram} className="w-[31.125rem]"/>
           </div>
         </div>
