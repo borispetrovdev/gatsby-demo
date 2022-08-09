@@ -9,6 +9,7 @@
   --nav-height: 4.375rem;
   --nav-distance-from-top: 1.25rem;
   --nav-offset-total: calc(var(--nav-height) + var(--nav-distance-from-top));
+  --form-translate-y: -6rem;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 
 @layer utilities {
   .wrap {
-    @apply max-w-[90rem] px-[1rem] md:px-[1.875rem] xl:px-[3.75rem] mx-auto;
+    @apply max-w-[90rem] px-[1rem] sm:px-[1.875rem] md:px-[2.75rem] xl:px-[3.75rem] mx-auto;
   }
 }
 
@@ -49,7 +50,7 @@ body {
 
   .gradientBackground {
     background-image: url("../images/homepageGradient.svg");
-    background-position: 50% 0%;
+    background-position: 0% 0%;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -72,15 +73,11 @@ body {
     transform: skewY(calc(var(--skew-angle) * -1deg)) translateY(var(--skew-offset));
   }
 
-  .translateFormUp {
-    transform: translateY(calc(var(--skew-offset) - 1rem))
-  }
-
   .unskewFormSectionContent {
     transform: skewY(calc(var(--skew-angle) * 1deg));
   }
 
   .btn {
-    @apply px-6 py-3 leading-7 rounded-[.625rem] cursor-pointer text-white font-semibold text-[1.25rem] w-fit;
+    @apply px-[1rem] py-[0.625rem] leading-7 rounded-[.625rem] cursor-pointer text-white font-semibold text-[1.25rem] w-fit;
   }
 }

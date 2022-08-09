@@ -14,19 +14,21 @@ const IndexPage = () => {
   return (
     <main className="text-rockset-gray">
       <title>Home Page</title>
-      <section className={`gradientBackground w-full lg:h-[var(--above-the-fold-height)] pt-[var(--nav-offset-total)] 
+      <section className={`gradientBackground w-full pt-[var(--nav-offset-total)] 
                            flex items-center relative`}>
-        <div className="wrap grid grid-cols-1 lg:grid-cols-2 auto-rows-fr">
+        <div className={`wrap grid grid-cols-1 lg:grid-cols-2 
+                         mt-[1.6875rem] mb-[12.0625rem]
+                         lg:mt-[5.6875rem] lg:mb-[8.1875rem]`}>
           <article className={`flex-1 flex flex-col justify-center space-around pl-[0.375rem] lg:pl-0
                                text-center lg:text-left lg:pr-[1.56rem] gap-[1.1875rem] lg:gap-[1.25rem] items-center lg:items-start`}>
-            <h1 className="text-[2rem] lg:text-[3.25rem] text-black font-semibold lg:leading-[125%]">MongoDB & Rockset:<br/> Best of Both Worlds</h1>
-            <span className="text-[1.125rem] lg:text-[1.375rem]">
+            <h1 className="text-[clamp(2rem,4.2vw,3.25rem)] text-black font-semibold lg:mb-[1.25rem] lg:leading-[125%]">MongoDB & Rockset:<br/> Best of Both Worlds</h1>
+            <span className="text-[clamp(1.125rem,2.1vw,1.375rem)]">
               If you're using, or thinking about using, MongoDB then you'll know it doesn't run SQL joins. And using $lookup or a denormalized dataset isn't as optimal as an SQL database to handle joins. But there's good news if you're looking for a real-time analytics solution. 
             </span>
             <a className="btn bg-coral">Free trial</a>
           </article>
-          <div className="flex items-start flex-1 pt-[2.5rem] lg:pl-[2.18rem]">
-            <img src={MongoDiagram} className="w-[31.125rem]"/>
+          <div className="mx-auto lg:mx-0 flex-1 pt-[2.5rem] lg:pl-[2.18rem]">
+            <img src={MongoDiagram} />
           </div>
         </div>
       </section>
@@ -39,18 +41,16 @@ const IndexPage = () => {
               <li>Use fully featured SQL on MongoDB. Run low latency queries on data generated seconds before.</li>
             </ul>
           </div>
-          <div className="flex items-center justify-start flex-1 pl-[2.5rem] translateFormUp">
-            <div className="bg-white w-fit shadow-[0rem_.25rem_1.5rem_rgba(75,38,225,0.3)] rounded-2xl ">
+          <div className="flex items-center justify-center lg:justify-start flex-1 lg:pl-[1.5rem] xl:pl-[2.5rem] 
+                          mt-[-6rem] mb-[2.375rem] lg:mb-[8rem]">
+            <div className="bg-white shadow-[0rem_.25rem_1.5rem_rgba(75,38,225,0.3)] rounded-2xl w-full max-w-[33rem]">
               <form className="flex flex-col items-center p-10 gap-5">
-                <h1 className="text-black text-[1.75rem] font-semibold">Get $300 in free credit</h1>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
-                <input type="text" className="border-[#B8C4D6] h-10 w-[28rem]"></input>
+                <h1 className="text-black text-[1.5rem] lg:text-[1.75rem] font-semibold">Get $300 in free credit</h1>
+                {[0,1,2,3,4,5,6,7,8,9].map(() => {
+                  return (
+                    <input type="text" className="border-[#B8C4D6] h-10 w-full"></input>
+                  )
+                })}
                 <input type="submit" value="Submit" className="btn bg-coral"/>
               </form>
             </div>
@@ -58,7 +58,7 @@ const IndexPage = () => {
         </div>
       </section>
       <section className="translate-x-0"> {/* Intentional no-op translate-x; fixes an overlapping issue */}
-        <div className="wrap flex flex-col lg:flex-row justify-center text-center gap-[2.5rem] text-[1.125rem] mb-[6.75rem]">
+        <div className="wrap flex flex-col lg:flex-row justify-center text-center gap-[2.5rem] text-[1.125rem] mb-[5.5rem] lg:mb-[6.75rem]">
           {[[ConnectorImage, 'Simple connector that uses MongoDB CDC.'],
             [NoDataPrepImage, 'Reduce efforts and resources required to build analytics.'],
             [SqlSupportImage, 'Use SQL and joins to make data queries easier.']
@@ -73,10 +73,10 @@ const IndexPage = () => {
       </section>
       <section className="testimonialSectionGradient text-white">
         <div className="wrap">
-          <div className="mx-[6.68rem] grid grid-cols-1 md:grid-cols-2 auto-rows-fr pt-[6.5rem] pb-[7rem]">
-            <div className="flex-1 flex items-center">
-              <div className="relative flex flex-col gap-[1rem]">
-                <img src={QuoteImage} className="absolute top-0 left-0 translate-x-[-65%] translate-y-[-32%]"/>
+          <div className="lg:mx-[3rem] xl:mx-[6.68rem] grid grid-cols-1 lg:grid-cols-2 py-[5rem] gap-[3.5rem] lg:gap-0 lg:py-[7rem]">
+            <div className="flex-1 relative mx-[2rem] lg:mx-0">
+              <img src={QuoteImage} className="absolute top-0 left-0 translate-x-[-35%] translate-y-[-40%]"/>
+              <div className="flex flex-col gap-[1rem] lg:ml-[1rem]">
                 <span className="font-semibold text-[1.75rem]">
                   Rockset fits all the requirements that we have for a new kind of database. It's serverless, real-time, provides a common API like SQL, and is able to ingest event data easily
                 </span>
@@ -85,7 +85,7 @@ const IndexPage = () => {
                 </span>
               </div>
             </div>
-            <div className="flex justify-center flex-1 pl-[7.5rem]">
+            <div className="flex flex-1 lg:pl-[3.5rem] xl:pl-[7.5rem] justify-center">
               <img src={MongoDiagram2}/>
             </div>
           </div>
@@ -93,8 +93,8 @@ const IndexPage = () => {
       </section>
       <section className="text-white">
         <div className="wrap">
-          <div className="max-w-[61.5rem] mx-auto py-[5.9rem] text-center">
-            <div className="knowMoreBox flex flex-col items-center justify-center py-[3.5rem] px-[10.875rem]">
+          <div className="max-w-[61.5rem] mx-auto pt-[5.9rem] lg:pb-[5.9rem] text-center">
+            <div className="knowMoreBox flex flex-col items-center justify-center py-[3.5rem] px-[1.875rem] md:px-[4rem] lg:px-[8rem] xl:px-[10.875rem]">
               <span className="font-semibold text-[2.125rem] pb-[.8125rem]">
                 Want to know more?
               </span>
@@ -109,7 +109,8 @@ const IndexPage = () => {
       </section>
       <section>
         <div className="wrap">
-          <div className="grid grid-cols-1 lg:grid-cols-4 font-[1rem] text-[#333333] py-[3.75rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-4 font-[1rem] text-[#333333] py-[3.75rem] 
+                          gap-[2.9375rem] lg:gap-0 text-center lg:text-left">
             {([
               {
                 heading: 'Product', 
@@ -151,9 +152,12 @@ const IndexPage = () => {
                 </dl>
               );
             })}
-            <form>
+            <form className="flex flex-col items-center lg:items-start">
               <h3 className="mb-[0.8125rem]">Follow our stories and unique insights.</h3>
-              <input className="text-[0.875rem] h-[2.1875rem] w-full block border-[0.054375rem] border-[#D8D8D8] rounded-[0.625rem] mb-[1.25rem]" type="text" placeholder="Email Address"></input>
+              <input className="text-[0.875rem] h-[2.1875rem] w-full block max-w-[16.625rem]
+                                border-[0.054375rem] border-[#D8D8D8] rounded-[0.625rem] mb-[1.25rem]" 
+                     type="text" 
+                     placeholder="Email Address"></input>
               <input className="block btn bg-[#2400AF] mb-[2.5rem]" type="submit" value="Follow us"/>
               <ul className="flex gap-[0.766875rem]">
                 {[
