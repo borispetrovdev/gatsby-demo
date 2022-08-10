@@ -22,9 +22,11 @@ module.exports = {
 
       'lg': '900px',
 
-      'xl': '1312px',
+      'xl': '1024px',
 
-      '2xl': '1536px',
+      '2xl': '1312px',
+
+      '3xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     }
   },

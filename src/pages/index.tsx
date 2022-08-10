@@ -22,7 +22,7 @@ const IndexPage = () => {
                               px-[clamp(0.625rem,-1.7903rem+10.3053vw,4rem)] lg:pr-[1.56rem] lg:pl-[0.375rem]
                               gap-[1.1875rem] lg:gap-[1.25rem] 
                               items-center lg:items-start`}>
-          <h1 className="text-black font-semibold lg:mb-[1.25rem] lg:leading-[125%]
+          <h1 className="text-black font-semibold lg:mb-[1.25rem] leading-[125%]
                         text-[clamp(2rem,1.1054rem+3.8168vw,3.25rem)] 
                       lg:text-[clamp(2.247rem,0.5753rem+2.9719vw,3.25rem)]">
             MongoDB & Rockset:<br/> Best of Both Worlds
@@ -50,9 +50,9 @@ const IndexPage = () => {
         </div>
         <div className="flex items-center flex-1 
                         justify-center lg:justify-start
-                        lg:pl-[1.5rem] xl:pl-[2.5rem] 
+                        lg:pl-[1.5rem] 2xl:pl-[2.5rem] 
                         mt-[clamp(-8rem,-6.5687rem+-6.1069vw,-10rem)] lg:mt-[-11rem]">
-          <div className="bg-white shadow-[0rem_.25rem_1.5rem_rgba(75,38,225,0.3)] rounded-2xl w-full max-w-[min(100%,32rem)]">
+          <div className="bg-white shadow-[0rem_.25rem_1.5rem_rgba(75,38,225,0.3)] rounded-[.625rem] w-full max-w-[min(100%,32rem)]">
             <form className="main-form flex flex-col items-start 
                               p-[clamp(1.25rem,0.8099rem+1.8779vw,2.5rem)]
                               gap-5">
@@ -105,7 +105,7 @@ const IndexPage = () => {
     </section>
     <section className="testimonialSectionGradient text-white">
       <div className="wrap">
-        <div className="lg:mx-[3rem] xl:mx-[6.68rem] grid grid-cols-1 lg:grid-cols-2 py-[5rem] gap-[3.5rem] lg:gap-0 lg:py-[7rem]">
+        <div className="lg:mx-[3rem] 2xl:mx-[6.68rem] grid grid-cols-1 lg:grid-cols-2 py-[5rem] gap-[3.5rem] lg:gap-0 lg:py-[7rem]">
           <div className="flex-1 relative mx-[2rem] lg:mx-0">
             <img src={QuoteImage} className="absolute top-0 left-0 translate-x-[-35%] translate-y-[-40%]"/>
             <div className="flex flex-col gap-[1rem] lg:ml-[1rem]">
@@ -117,7 +117,7 @@ const IndexPage = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-1 lg:pl-[3.5rem] xl:pl-[7.5rem] justify-center">
+          <div className="flex flex-1 lg:pl-[3.5rem] 2xl:pl-[7.5rem] justify-center">
             <img src={MongoDiagram2}/>
           </div>
         </div>
@@ -126,7 +126,7 @@ const IndexPage = () => {
     <section className="text-white">
       <div className="wrap">
         <div className="max-w-[61.5rem] mx-auto pt-[5.9rem] lg:pb-[5.9rem] text-center">
-          <div className="knowMoreBox flex flex-col items-center justify-center py-[3.5rem] px-[1.875rem] md:px-[4rem] lg:px-[8rem] xl:px-[10.875rem]">
+          <div className="knowMoreBox flex flex-col items-center justify-center py-[3.5rem] px-[1.875rem] md:px-[4rem] lg:px-[8rem] 2xl:px-[10.875rem]">
             <span className="font-semibold text-[2.125rem] pb-[.8125rem]">
               Want to know more?
             </span>

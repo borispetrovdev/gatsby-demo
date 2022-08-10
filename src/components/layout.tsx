@@ -1,20 +1,16 @@
 import React from "react"
 
-import RocksetLogo from "../images/rockset_logo.svg"
 import FacebookIcon from "../images/facebook.svg"
 import TwitterIcon from "../images/twitter.svg"
 import LinkedInIcon from "../images/linkedin.svg"
 import SlackIcon from "../images/slack.svg"
+import { Nav } from "./Nav"
 
 export const Layout = ({children }) => {
   return (
     <>
-      <nav className="outerSiteHeader wrap">
-        <header className="innerHeader h-full w-full flex items-center mt-[var(--nav-distance-from-top)]">
-          <img src={RocksetLogo} className="h-8 mx-5"/>
-        </header>
-      </nav>
-      <main className="text-rockset-gray">
+      <Nav/>
+      <main className="text-rockset-gray bg-white">
         {children}
       </main>
 

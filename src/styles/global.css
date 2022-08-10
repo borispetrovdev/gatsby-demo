@@ -1,5 +1,23 @@
 @tailwind base;
 
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('../fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('../fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf');
+  font-weight: 600;
+}
+
 :root {
   --skew-angle: -6.5deg;
   --skew-angle-tangent: 0.1139356083;
@@ -7,7 +25,7 @@
   --form-height-above-center-diagonal: 6.5rem;
   --above-the-fold-height: 43.75rem;
   --nav-height: 3.125rem;
-  --nav-distance-from-top: 1.25rem;
+  --nav-distance-from-top: 0.875rem;
   --nav-offset-total: calc(var(--nav-height) + var(--nav-distance-from-top));
   --form-translate-y: -6rem;
 }
@@ -15,13 +33,14 @@
 @screen sm {
   :root {
     --nav-height: 4.375rem;
+    --nav-distance-from-top: 1.25rem;
   }
 }
 
 body {
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 * {
@@ -33,7 +52,7 @@ body {
 
 @layer utilities {
   .wrap {
-    @apply max-w-[90rem] px-[1rem] sm:px-[1.875rem] md:px-[2.75rem] xl:px-[3.75rem] mx-auto;
+    @apply max-w-[90rem] px-[1.1rem] sm:px-[1.875rem] md:px-[2.75rem] xl:px-[3.75rem] mx-auto;
   }
 
   .paragraph-text-responsive {
@@ -42,22 +61,6 @@ body {
 }
 
 @layer components {
-  .outerSiteHeader {
-    @apply h-[var(--nav-height)];
-    margin: auto;
-    position: fixed;
-    left: 0rem;
-    top: 0rem;
-    right: 0rem;
-    z-index: 5000;
-  }
-
-  .innerHeader {
-    background: #FFFFFF;
-    box-shadow: 0 0.875rem 1.5rem rgba(102, 0, 153, 0.12);
-    border-radius: 0.625rem;
-  }
-
   .gradientBackground {
     background-image: url("../images/homepageGradient.svg");
     background-position: 0% 0%;
