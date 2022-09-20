@@ -4,7 +4,7 @@ import FacebookIcon from "../images/facebook.svg"
 import TwitterIcon from "../images/twitter.svg"
 import LinkedInIcon from "../images/linkedin.svg"
 import SlackIcon from "../images/slack.svg"
-import { Nav } from "./nav"
+import { Nav } from "./Nav"
 
 export const Layout = ({children }) => {
   return (
