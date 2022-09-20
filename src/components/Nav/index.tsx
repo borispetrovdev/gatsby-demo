@@ -43,7 +43,7 @@ export const Nav = () => {
             </ul>
             <div className="flex gap-[1.8rem] items-center mr-[1rem]">
               <a href="/" className="text-coral">Login</a>
-              <a href="/" className="btn bg-coral font-medium">Try free</a>
+              <a href="/" className="btn bg-coral font-medium rounded-[.2175rem] py-[.625rem] text-[1rem] leading-[1.25]">Try free</a>
             </div>
           </div>
           <NavToggleButton 
